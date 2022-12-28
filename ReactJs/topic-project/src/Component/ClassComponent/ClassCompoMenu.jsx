@@ -8,6 +8,8 @@ class ClassCompoMenu extends Component {
                     <li><Link to="classcompointro">Class Compo Intro</Link></li>
                     <li><Link to="jsxclasscompo">JSX</Link></li>
                     <li><Link to="propsinclass">Props</Link></li>
+                    <li><Link to="stateinclass">State</Link></li>
+                    <li><Link to="statelifecycleinclass">State LifeCycle</Link></li>
                 </ul>
                 <Outlet></Outlet>
             </>
