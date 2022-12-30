@@ -10,6 +10,8 @@ class ClassCompoMenu extends Component {
                     <li><Link to="propsinclass">Props</Link></li>
                     <li><Link to="stateinclass">State</Link></li>
                     <li><Link to="statelifecycleinclass">State LifeCycle</Link></li>
+                    <li><Link to="conditionalrendering">Conditional Rendering</Link></li>
+                    <li><Link to="listandkeys">List & Keys</Link></li>
                 </ul>
                 <Outlet></Outlet>
             </>

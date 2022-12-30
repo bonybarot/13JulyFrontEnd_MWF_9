@@ -14,7 +14,7 @@ import {
 import { Link } from 'react-router-dom';
 const Headerfile = () => {
     const [showNavColorSecond, setShowNavColorSecond] = useState(false);
-    
+    const MenuObject =  { "/home": "Home", "/about": "About us", "/contact": "Contact Us","/login":"Singin" }
     return (
         <>
             <MDBNavbar expand='lg' dark bgColor='dark'>
