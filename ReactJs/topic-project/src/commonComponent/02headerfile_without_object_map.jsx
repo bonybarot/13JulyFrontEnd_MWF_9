@@ -14,14 +14,6 @@ import {
 import { Link } from 'react-router-dom';
 const Headerfile = () => {
     const [showNavColorSecond, setShowNavColorSecond] = useState(false);
-    const MenuObject = { "/home": "Home", "/about": "About us", "/contact": "Contact Us", "/login": "Singin" }
-    // let content = MenuObject.map((data, key) => {
-    let content = Object.entries(MenuObject).map((data, key) => {
-        return <MDBNavbarItem key={key}>
-            <Link className='nav-link' to={data[0]}>{data[1]}</Link>
-        </MDBNavbarItem>
-    })
-    // console.log(content);
     return (
         <>
             <MDBNavbar expand='lg' dark bgColor='dark'>
@@ -39,7 +31,24 @@ const Headerfile = () => {
                     </MDBNavbarToggler>
                     <MDBCollapse show={showNavColorSecond} navbar id='navbarColor02'>
                         <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
-                            {content}
+                            <MDBNavbarItem className='active'>
+                                <MDBNavbarLink aria-current='page' to='/'>
+                                    Home
+                                </MDBNavbarLink>
+                                <Link className='nav-link' to='/'>Home</Link>
+                            </MDBNavbarItem>
+                            <MDBNavbarItem>
+                                <Link className='nav-link' to='/features'>Features</Link>
+                                {/* <MDBNavbarLink to='/features'>Features</MDBNavbarLink> */}
+                            </MDBNavbarItem>
+                            <MDBNavbarItem>
+                                <Link className='nav-link' to='/pricing'>Pricing</Link>
+                                {/* <MDBNavbarLink href='/pricing'>Pricing</MDBNavbarLink> */}
+                            </MDBNavbarItem>
+                            <MDBNavbarItem>
+                                <Link className='nav-link' to='/about'>About</Link>
+                                {/* <MDBNavbarLink href='/about'>About</MDBNavbarLink> */}
+                            </MDBNavbarItem>
                             <MDBNavbarItem>
                                 <Link className='nav-link' to='/examples'>Example</Link>
                             </MDBNavbarItem>
