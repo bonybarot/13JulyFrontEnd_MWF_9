@@ -13,6 +13,10 @@ class ClassCompoMenu extends Component {
                     <li><Link to="conditionalrendering">Conditional Rendering</Link></li>
                     <li><Link to="listandkeys">List & Keys</Link></li>
                     <li><Link to="controlledcompo">Controlled Compo</Link></li>
+                    <li><Link to="uncontrolledcompo">Uncontrolled Compo</Link></li>
+                    <li><Link to="spreadvsrest">Spread vs. Rest</Link></li>
+                    <li><Link to="compositionvsinheritance">Composition vs. Inheritance</Link></li>
+                    <li><Link to="arraymap">Access Array via map</Link></li>
                 </ul>
                 <Outlet></Outlet>
             </>
