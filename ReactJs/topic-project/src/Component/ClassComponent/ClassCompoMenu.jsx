@@ -17,6 +17,11 @@ class ClassCompoMenu extends Component {
                     <li><Link to="spreadvsrest">Spread vs. Rest</Link></li>
                     <li><Link to="compositionvsinheritance">Composition vs. Inheritance</Link></li>
                     <li><Link to="arraymap">Access Array via map</Link></li>
+                    <li><Link to="apiexample">API Example</Link></li>
+                    <li><Link to="cssexample">CSS Example</Link></li>
+                    <li><Link to="cssstyledcomponentexample">CSS Styled Component Example</Link></li>
+                    <li><Link to="stateliftingclasscompo">State lifting Class Component Example</Link></li>
+                    <li><Link to="hocclasscompo">High Order Class Component Example</Link></li>
                 </ul>
                 <Outlet></Outlet>
             </>

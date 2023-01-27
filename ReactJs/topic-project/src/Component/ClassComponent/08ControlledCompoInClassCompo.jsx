@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 class ControlledCompoInClassCompo extends Component {
     constructor(props) {
         super(props);
-        // this.state = {username:""}
-        this.state = {username:"",formData:{"temp":"data"}}
+        // this.state = {username:"",password:""}
+        // this.state = {username:"",formData:{"temp":"data"}}
+        this.state = {username:"",formData:{}}
         // this.state = {
         //     data: {}
         //   }
@@ -69,7 +70,7 @@ class ControlledCompoInClassCompo extends Component {
                     <br />
                     <br />
 
-                    <input type="text" onChange={(event)=>{ this.setState(koibhi => ({ formData: {  ...koibhi.formData,  [event.target.name]: event.target.value } }))  }}name="password" id="password" />
+                    <input type="text" onChange={(event)=>{ this.setState((koibhi) => ({ formData: {  ...koibhi.formData,  [event.target.name]: event.target.value } }))  }}name="password" id="password" />
                     {/* <input type="text" onChange={(event)=>{ this.setState({...this.state.formData,[event.target.name]:event.target.value})  }} name="uname" id="uname" /> */}
                     {/* <input type="text" onChange={(event)=>{ this.setState({[event.target.name]:event.target.value})}} name="username" id="username" />
                     <input type="text" onChange={(event)=>{ this.setState({[event.target.name]:event.target.value})}} name="password" id="password" /> */}

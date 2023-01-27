@@ -9,6 +9,11 @@ class ClassCompoMenu extends Component {
 
                 <ul>
                     <li><Link to="functionalclock">Clock</Link></li>
+                    <li><Link to="functionalcompoexample">Intro</Link></li>
+                    <li><Link to="stateexampleinfunctionalcompo">State</Link></li>
+                    <li><Link to="useeffectexampleinfunctionalcompo">useEffect </Link></li>
+                    <li><Link to="uselayouteffectexampleinfunctionalcompo">useLayoutEffect </Link></li>
+                    <li><Link to="useusecontextinfunctionalcompo">useContext </Link></li>
                 </ul>
                 </div>
             </div>

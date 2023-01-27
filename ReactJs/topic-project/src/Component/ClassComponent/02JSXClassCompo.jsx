@@ -13,11 +13,11 @@ class JSXClassCompo extends Component {
         // const headeing = `<h1>${something}</h1>`
         const headeing = <h1>{something}</h1>
         return (
-            <div>
+            <>
                 {headeing}
                 2+2 = {2 + 2}
                 <p>FullName : {user.firstName} {user.lastName}</p>
-            </div>
+            </>
         );
     }
 }
