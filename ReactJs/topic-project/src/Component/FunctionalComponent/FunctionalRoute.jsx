@@ -7,6 +7,9 @@ import StateExampleFunctionalCompo from './03StateExampleFunctionalCompo.jsx';
 import UseEffectExample from './04useEffectExample';
 import UseLayoutEffectExample from './05UseLayoutEffectExample.jsx';
 import UseContextExample from './06UseContextExample.jsx';
+import UseReducerExample from './07UseReducerExample.jsx';
+import UseCallBackExample from './08UseCallBackExample.jsx';
+import UseMemoExample from './09UseMemoExample';
 class ClassRoute extends Component {
     render() {
         return (
@@ -19,6 +22,9 @@ class ClassRoute extends Component {
                         <Route path="useeffectexampleinfunctionalcompo" element={<UseEffectExample />} />
                         <Route path="uselayouteffectexampleinfunctionalcompo" element={<UseLayoutEffectExample />} />
                         <Route path="useusecontextinfunctionalcompo" element={<UseContextExample />} />
+                        <Route path="usereducerinfunctionalcompo" element={<UseReducerExample />} />
+                        <Route path="usecallbackinfunctionalcompo" element={<UseCallBackExample />} />
+                        <Route path="usememoinfunctionalcompo" element={<UseMemoExample />} />
                     </Route>
                 </Routes>
             </>

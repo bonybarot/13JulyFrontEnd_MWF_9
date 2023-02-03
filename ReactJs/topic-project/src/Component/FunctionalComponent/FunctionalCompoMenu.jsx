@@ -14,6 +14,9 @@ class ClassCompoMenu extends Component {
                     <li><Link to="useeffectexampleinfunctionalcompo">useEffect </Link></li>
                     <li><Link to="uselayouteffectexampleinfunctionalcompo">useLayoutEffect </Link></li>
                     <li><Link to="useusecontextinfunctionalcompo">useContext </Link></li>
+                    <li><Link to="usereducerinfunctionalcompo">usereducer </Link></li>
+                    <li><Link to="usecallbackinfunctionalcompo">useCallBack</Link></li>
+                    <li><Link to="usememoinfunctionalcompo">useMemo</Link></li>
                 </ul>
                 </div>
             </div>
