@@ -10,6 +10,7 @@ import UseContextExample from './06UseContextExample.jsx';
 import UseReducerExample from './07UseReducerExample.jsx';
 import UseCallBackExample from './08UseCallBackExample.jsx';
 import UseMemoExample from './09UseMemoExample';
+import UseRefExample from './10UseRefExample';
 class ClassRoute extends Component {
     render() {
         return (
@@ -25,6 +26,7 @@ class ClassRoute extends Component {
                         <Route path="usereducerinfunctionalcompo" element={<UseReducerExample />} />
                         <Route path="usecallbackinfunctionalcompo" element={<UseCallBackExample />} />
                         <Route path="usememoinfunctionalcompo" element={<UseMemoExample />} />
+                        <Route path="userefinfunctionalcompo" element={<UseRefExample />} />
                     </Route>
                 </Routes>
             </>
