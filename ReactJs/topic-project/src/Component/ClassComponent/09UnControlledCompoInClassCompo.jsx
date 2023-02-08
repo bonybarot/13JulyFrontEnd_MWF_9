@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class UnControlledCompoInClassCompo extends Component {
     constructor(props) {
+        console.log("called"); 
         super(props);
         this.input =React.createRef();
     }
