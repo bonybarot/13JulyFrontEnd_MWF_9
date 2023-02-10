@@ -4,7 +4,6 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import { RouterProvider,createBrowserRouter } from "react-router-dom";
 // import ComponentExample from './01ComponentExample';
 // import HeaderCompo from './commonComponent/02headerfile.jsx';
-
 import MainRoutes from './mainroutes';
 // const router = createBrowserRouter([
 //     {
