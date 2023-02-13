@@ -2,6 +2,7 @@
 import React from 'react';
 import './login.css';
 import CustomHook from './Hooks/CustomHook'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const {handleChange,inp,errors} = CustomHook({},{usernameError:"",passwordError:""})
@@ -33,6 +34,9 @@ const Login = () => {
     <div className="message">
         <div><input type="checkbox" /> Remember ME</div>
         <div><a href="#">Forgot your password</a></div>
+    </div>
+    <div className="">
+        <div className='text-center'><Link className='txt-w' to="/register">Click here for create new account</Link></div>
     </div>
 </form>
         <div className="social">

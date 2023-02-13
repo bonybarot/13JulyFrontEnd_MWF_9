@@ -8,12 +8,13 @@
 </head>
 <body>
     <script>
-        setTimeout(() => {
-            console.log("called setTimeout");
+        function funcName() {
+            console.log("called");
+        }
+        setTimeout(funcName, 3000);
+        setInterval(() => {
+            console.log("called setInterval");  
         }, 3000);
-        // setInterval(() => {
-        //     console.log("called setInterval");  
-        // }, 3000);
     </script>
 </body>
 </html>

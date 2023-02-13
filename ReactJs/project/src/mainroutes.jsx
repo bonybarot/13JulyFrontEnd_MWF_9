@@ -5,6 +5,7 @@ import AboutUsPage from "./AboutUsPage.jsx";
 import PricingPage from "./PricingPage.jsx";
 import Features from "./Features.jsx";
 import Login from "./Login";
+import Registration from "./Registration";
 // import ClassComponent from "./Component/ClassComponent/ClassRoute.jsx";
 
 // const ClassComponent = React.lazy(() => import('./Component/ClassComponent/ClassRoute'))
@@ -30,6 +31,9 @@ const MainRoutes = createBrowserRouter([
     }, {
         path: "/login",
         element: <Login />,
+    }, {
+        path: "/register",
+        element: <Registration />,
     }
     // , {
     //     path: "/examples",
