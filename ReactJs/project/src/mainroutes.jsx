@@ -8,7 +8,7 @@ import Login from "./Login";
 import Registration from "./Registration";
 // import ClassComponent from "./Component/ClassComponent/ClassRoute.jsx";
 
-// const ClassComponent = React.lazy(() => import('./Component/ClassComponent/ClassRoute'))
+const AdminRoute = React.lazy(() => import('./Components/Admin/AdminRoute'))
 // const FunctionalComponent = React.lazy(() => import('./Component/FunctionalComponent/FunctionalRoute'))
 // const Product = React.lazy(() => import('./ClassComponent'))
 // element: <HomePage />,
@@ -34,6 +34,9 @@ const MainRoutes = createBrowserRouter([
     }, {
         path: "/register",
         element: <Registration />,
+    }, {
+        path: "admin/*",
+        element: <Suspense fallback={<h2>Loading...</h2>}><AdminRoute /></Suspense> 
     }
     // , {
     //     path: "/examples",

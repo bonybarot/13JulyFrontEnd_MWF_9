@@ -1,14 +1,16 @@
 
 import React from 'react';
-import './login.css';
 import CustomHook from './Hooks/CustomHook'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useCookies } from 'react-cookie'
 
 const Login = () => {
     // const CustHookData = CustomHook({},{usernameError:"",passwordError:""})
     // CustHookData.handleChange
     const navigate = useNavigate();
+    const [cookies, setCookie] = useCookies()
+
     const { handleChange, inp, errors } = CustomHook({}, { usernameError: "", passwordError: "" })
     const LoginForm = async (e) => {
         e.preventDefault();
@@ -23,8 +25,11 @@ const Login = () => {
                 // console.log("success response");
                 // console.log(response.data.Data[0].role_id);
                 if (response.data.Code == 1) {
+                    setCookie('loginsuccess',1)
+                    setCookie('username',response.data.Data[0].username)
+                    setCookie('password',response.data.Data[0].password)
                     if (response.data.Data[0].role_id == 1) {
-                        navigate("/admindashboard")  
+                        navigate("/admin")  
                     }else{
                         navigate("/")  
                     }
@@ -43,6 +48,7 @@ const Login = () => {
         console.log("login click", LoginRes);
     }
     return (
+<div className="login-box">
 
         <div className="container">
             <div className="form-box">
@@ -83,6 +89,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+</div>
 
     );
 };
