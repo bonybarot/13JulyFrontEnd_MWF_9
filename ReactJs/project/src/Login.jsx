@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import CustomHook from './Hooks/CustomHook'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -10,42 +10,52 @@ const Login = () => {
     // CustHookData.handleChange
     const navigate = useNavigate();
     const [cookies, setCookie] = useCookies()
+    const [required, setRequired] = useState()
 
-    const { handleChange, inp, errors } = CustomHook({}, { usernameError: "", passwordError: "" })
+    const { handleChange, inp, errors } = CustomHook({username:"",password:""}, { usernameError: "", passwordError: "" })
     const LoginForm = async (e) => {
         e.preventDefault();
         // console.log("login click", inp);
-        let url = "https://justjayapi.000webhostapp.com/login";
-        let LoginRes = await axios.get(url, {
-            params: {
-                username: inp.username,
-                password: inp.password
-            }
-        }).then(function (response) {
-                // console.log("success response");
-                // console.log(response.data.Data[0].role_id);
-                if (response.data.Code == 1) {
-                    setCookie('loginsuccess',1)
-                    setCookie('username',response.data.Data[0].username)
-                    setCookie('password',response.data.Data[0].password)
-                    if (response.data.Data[0].role_id == 1) {
-                        navigate("/admin")  
-                    }else{
-                        navigate("/")  
-                    }
-                }else{
-                    console.log("Invalid user");
+        // console.log(Object.keys(inp).length );
+        // return false;
+        if (Object.keys(inp).length  > 0) {
+            let url = "https://justjayapi.000webhostapp.com/login";
+            let LoginRes = await axios.get(url, {
+                params: {
+                    username: inp.username,
+                    password: inp.password
                 }
-                return response;
-            }).catch(function (error) {
-                console.log("If error");
-                console.log(error);
-            })
+            }).then(function (response) {
+                    // console.log("success response",response);
+                    // return false
+                    // console.log(response.data.Data[0].role_id);
+                    if (response.data.Code == 1) {
+                        setCookie('loginsuccess',1)
+                        setCookie('username',response.data.Data[0].username)
+                        setCookie('password',response.data.Data[0].password)
+                        if (response.data.Data[0].role_id == 1) {
+                            navigate("/admin")  
+                        }else{
+                            navigate("/")  
+                        }
+                    }else{
+                        console.log("Invalid user");
+                    }
+                    return response;
+                }).catch(function (error) {
+                    console.log("If error");
+                    console.log(error);
+                })
+            
+        }else{
+            setRequired("user name and password is required");
+            // console.log("user name and password is required");
+        }
             // .finally(function () {
             //     // console.log("always executed");
             //     // always executed
             // });
-        console.log("login click", LoginRes);
+        // console.log("login click", LoginRes);
     }
     return (
 <div className="login-box">
@@ -86,6 +96,7 @@ const Login = () => {
                         <a href="#"><i className="fab fa-twitter-square"></i></a>
                         <a href="#"><i className="fab fa-google"></i></a>
                     </div>
+                    {required}
                 </div>
             </div>
         </div>

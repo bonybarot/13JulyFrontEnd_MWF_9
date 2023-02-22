@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import { Navigate } from "react-router-dom";
 import AdminDashboard from './AdminDashboard.jsx';
 import AdminProfile from './AdminProfile.jsx';
+import AdminAllUsers from './allusers';
 
 
 class AdminRoute extends Component {
@@ -13,6 +14,7 @@ class AdminRoute extends Component {
                     {/* <Route path="admin/admindashboard" element={<AdminDashboard />} /> */}
                     <Route path="/" element={<AdminDashboard />} >
                         <Route path="profile" element={<AdminProfile />} ></Route>
+                        <Route path="allusers" element={<AdminAllUsers />} ></Route>
                     </Route>
                 </Routes>
             </>

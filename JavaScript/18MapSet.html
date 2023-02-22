@@ -77,21 +77,31 @@
     <script>
         const array1 = [1, 4, 9, 16];
         // pass a function to map
-        const map1 = array1.map(x => x * 2);
-        array1.forEach(element => {
+        let ForeachRes = array1.forEach(element => {
             console.log(element);
+            return "test"
         });
-        console.log(map1);
-        // let string = new String();
-        // let array = new Array();
+        console.log(ForeachRes);
+        let MapResponse = array1.map((data)=>{
+            console.log(data);
+            return data*2
+        })
+        console.log(MapResponse);
+        // const map1 = array1.map(x => x * 2);
+        // array1.forEach(element => {
+        //     console.log(element);
+        // });
+        // console.log(map1);
+        // // let string = new String();
+        // // let array = new Array();
         let map = new Map();
         map.set('1', 'str1');   // a string key
         map.set(1, 'num1');     // a numeric key
         map.set(true, 'bool1'); // a boolean key
         console.log(map);
         console.log(map.get(1));
-        console.log(map.get('1'));
-        console.log(map.size); // 3
+        // console.log(map.get('1'));
+        // console.log(map.size); // 3
 
     </script>
 </body>
